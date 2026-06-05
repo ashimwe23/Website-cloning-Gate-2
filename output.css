@@ -17,6 +17,7 @@
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -254,6 +255,12 @@
   .-mt-5 {
     margin-top: calc(var(--spacing) * -5);
   }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
+  }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -278,11 +285,17 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mt-30 {
+    margin-top: calc(var(--spacing) * 30);
+  }
   .mt-50 {
     margin-top: calc(var(--spacing) * 50);
   }
   .mt-56 {
     margin-top: calc(var(--spacing) * 56);
+  }
+  .mt-72 {
+    margin-top: calc(var(--spacing) * 72);
   }
   .mr-1 {
     margin-right: calc(var(--spacing) * 1);
@@ -500,6 +513,9 @@
   .resize {
     resize: both;
   }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .flex-row {
     flex-direction: row;
   }
@@ -654,6 +670,9 @@
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
   }
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
+  }
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
   }
@@ -754,6 +773,9 @@
   .text-gray-700 {
     color: var(--color-gray-700);
   }
+  .text-gray-800 {
+    color: var(--color-gray-800);
+  }
   .text-green-700 {
     color: var(--color-green-700);
   }
@@ -766,6 +788,27 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .hover\:bg-green-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-800);
+      }
+    }
+  }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-green-700 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green-700);
+      }
+    }
   }
 }
 @property --tw-rotate-x {
